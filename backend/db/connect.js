@@ -4,7 +4,7 @@
 let mysql = require('mysql')
 
 // Retrieve MySQL user & password from gitignored config.js
-let config = require('./config')['development'];
+let config = require('../config')['development'];
 
 // Create a pool with the potential for 10 connections 
 let pool = mysql.createPool({
