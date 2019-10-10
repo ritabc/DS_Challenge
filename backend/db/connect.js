@@ -4,7 +4,8 @@
 let mysql = require('mysql')
 
 // Retrieve MySQL user & password from gitignored config.js
-let config = require('../config')['development'];
+let env = process.env.NODE_ENV || 'development'
+let config = require('./config')[env];
 
 // Create a pool with the potential for 10 connections 
 let pool = mysql.createPool({
@@ -12,7 +13,7 @@ let pool = mysql.createPool({
     host: 'localhost',
     user: config.user,
     password: config.password,
-    database: 'petappointments',
+    database: config.database,
 })
 
 // export getConnFromPool() method to DRY error handling & actural querying - call callback after making the connection
