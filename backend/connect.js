@@ -21,15 +21,25 @@ pool.getConnection(function (err, connection) {
         connection.release();
         return console.error('error: ' + err.message);
     }
-    console.log('Connected to the MySQL server.');
 
+    // query for creating the appointments table if it doesn't already exist 
+    let createApptsQuery = `CREATE TABLE IF NOT EXISTS appointments(
+        id int NOT NULL, 
+        petName varchar(255) NOT NULL, 
+        humanName varchar(255) NOT NULL, 
+        date date NOT NULL,
+        time time NOT NULL,
+        type varchar(255),
+        paid tinyint(1) NOT NULL DEFAULT 0,
+        PRIMARY KEY (id)
+        )`;
+
+    connection.query(createApptsQuery, function (err, rows, fields) {
+        if (err) {
+            console.log(err.message)
+        }
+    });
+
+    // End the connection when we're done using it
     connection.release();
-});
-
-// close all the connections in the pool
-pool.end(function (err) {
-    if (err) {
-        return console.log('error:' + err.message);
-    }
-    console.log('Close the databse connection.');
 });
