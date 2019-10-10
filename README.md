@@ -17,7 +17,6 @@ By Rita Bennett-Chew
     * mysql> `CREATE DATABASE petappointments;`
     * mysql> `CREATE DATABASE petappointmentsTest;`
 
-
 - Set up backend/db/config.js file: 
 ```
 let config = {
