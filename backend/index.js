@@ -22,3 +22,5 @@ pool.getConnFromPool(function (connection) {
 
     connection.release();
 })
+
+// process.exit()
