@@ -1,5 +1,5 @@
 # README
-A practice project using Node.js, AngularJS, and MySQL, along with _other libraries including faker (for seeding data), express, mocha & chai(for testing), (),_, to create an application with CRUD capabilities for _data_. 
+A practice project using Node.js, AngularJS, and MySQL, along with _other libraries including faker (for seeding data), express, mocha & chai(for testing), nodemon for hot reloading (),_, to create an application with CRUD capabilities for _data_. 
 By Rita Bennett-Chew
 
 ## Decisions Made
@@ -46,3 +46,7 @@ module.exports = config
 - Add a migrations package like `mysql-migrations` to manage multiple users / developers working on the same project in order to keep the databases consistent 
 - Use an ORM like Sequelize. For now I was learning a few new things and wanted to get the basics down of node
 - Might install and configure Babel in order to use ES6 
+
+## Stretch Goals / Next Steps
+- Adding data validation 
+- Responsive UI - ie collapse navbar

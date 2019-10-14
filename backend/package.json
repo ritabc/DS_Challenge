@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "NODE_ENV=test mocha --recursive",
-        "start": "NODE_ENV=development node index.js"
+        "start": "NODE_ENV=development node app.js",
+        "dev": "NODE_ENV=development PORT=4205 nodemon app.js"
     },
     "author": "Rita Bennett-Chew",
     "license": "ISC",
@@ -16,6 +17,7 @@
     },
     "devDependencies": {
         "chai": "^4.2.0",
-        "mocha": "^6.2.1"
+        "mocha": "^6.2.1",
+        "nodemon": "^1.19.3"
     }
 }
