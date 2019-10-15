@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+    <h1>Add New Appointment</h1>
+</div>
+<div>
+    <form ng-submit="submitForm()">
+        <div class="form-group">
+            <label for="petName">Pet Name</label>
+            <input type="text" name="pet" id="petName" ng-model="appointment.petName">
+            <label for="humanName">Human Name</label>
+            <input type="text" name="human" id="humanName" ng-model="appointment.humanName">
+            <label for="type">Appointment Type</label>
+            <input type="text" name="type" id="type" ng-model="appointment.type">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="jumbotron text-center">
+    <h1>All Appointments</h1>
+</div>
+<div>
+    <ul>
+        <li ng-repeat="appt in appointments">
+            <strong>PetName: </strong>{{appt.petName}} of <strong>Human</strong> {{appt.humanName}} for {{ appt.type }}
+            at {{appt.time}}
+        </li>
+    </ul>
+</div>
