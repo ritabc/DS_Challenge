@@ -48,6 +48,8 @@ app.use('/scripts', express.static(__dirname + '/node_modules'))
 // Do the same for frontend.js
 app.use('/appScripts', express.static(__dirname + '/frontend'))
 
+// Tell express where to get static files 
+app.use(express.static('frontend'))
 
 // '/' after URL or localhost:port refers to Index or Home
 app.use('/', indexRouter);

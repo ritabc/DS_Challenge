@@ -2,7 +2,7 @@ let Appointment = require('../models/Appointment');
 let async = require('async');
 // Index home page
 exports.index = function (req, res) {
-    res.render('../frontend/index.ejs');
+    res.render('../frontend/index.ejs', { name: 'Data From DB' });
 }
 
 // list of all appointments
