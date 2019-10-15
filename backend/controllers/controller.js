@@ -1,9 +1,18 @@
 let Appointment = require('../models/Appointment');
+let async = require('async');
+// Index home page
+exports.index = function (req, res) {
+    res.render('../frontend/index.ejs');
+}
 
 // list of all appointments
-exports.appt_list = function (req, res) {
-    res.send('TODO: Appt list');
-};
+exports.appt_list = function (req, res, next) {
+    Appointment.all(function (err, queryResult) {
+        if (err) { return next(err); }
+        // res.json(queryResult);
+        res.render('../frontend/appointments.ejs', { appTitle: 'All Appointments' })
+    })
+}
 
 // Show specific Appt
 exports.apppt_show = function (req, res) {
