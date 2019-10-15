@@ -46,10 +46,10 @@ app.engine('html', require('ejs').renderFile);
 // Allow index.html to find node_module without exposing internal paths
 app.use('/scripts', express.static(__dirname + '/node_modules'))
 // Do the same for frontend.js
-app.use('/appScripts', express.static(__dirname + '/frontend'))
+app.use('/appScripts', express.static(__dirname + '/views'))
 
 // Tell express where to get static files 
-app.use(express.static('frontend'))
+app.use(express.static('views'))
 
 // '/' after URL or localhost:port refers to Index or Home
 app.use('/', indexRouter);

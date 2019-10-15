@@ -6,19 +6,16 @@
     "scripts": {
         "test": "NODE_ENV=test mocha --recursive",
         "start": "NODE_ENV=development node app.js",
-        "dev": "NODE_ENV=development PORT=4205 nodemon app.js"
+        "dev": "NODE_ENV=development PORT=4206 nodemon app.js"
     },
     "author": "Rita Bennett-Chew",
     "license": "ISC",
     "dependencies": {
         "angular": "^1.7.8",
         "angular-route": "^1.7.8",
-        "async": "^3.1.0",
-        "consolidate": "^0.15.1",
         "ejs": "^2.7.1",
         "express": "^4.17.1",
         "faker": "^4.1.0",
-        "mustache": "^3.1.0",
         "mysql": "^2.17.1",
         "path": "^0.12.7"
     },

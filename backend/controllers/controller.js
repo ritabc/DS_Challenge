@@ -1,16 +1,20 @@
 let Appointment = require('../models/Appointment');
-let async = require('async');
-// Index home page
+
+// // Index home page
 exports.index = function (req, res) {
-    res.render('../frontend/index.ejs', { name: 'Data From DB' });
+    res.render('./index.ejs', { pageName: 'Data From DB' });
 }
 
 // list of all appointments
-exports.appt_list = function (req, res, next) {
+exports.appt_list = function (req, res) {
     Appointment.all(function (err, queryResult) {
-        if (err) { return next(err); }
+        if (err) { return console.error(err); }
         // res.json(queryResult);
-        res.render('../frontend/appointments.ejs', { appTitle: 'All Appointments' })
+        // res.render('./partials/apptsList.ejs', {
+        //     pageName: 'Show All Appointments',
+        //     appointments: queryResult
+        // })
+        res.json(queryResult)
     })
 }
 

@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+    <h1>All Appointments</h1>
+    <!-- <ul>
+        <% appointments.forEach(function(appt) { %>
+        <li><%= appt.petName %> of human <%= appt.humanName %> for <%= appt.type %> at <%= appt.time %></li>
+        <% }) %> -->
+    <!-- </ul> -->
+    <ul>
+        <li ng-repeat="appt in appointments">
+            {{appt.petName}} of human {{appt.humanName}} for {{ appt.type }} at {{appt.time}}
+        </li>
+    </ul>
+</div>
