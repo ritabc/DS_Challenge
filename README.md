@@ -10,13 +10,9 @@ Below I have listed some minor changes I would make were I to do this project ov
 All in all, I definitely learned a lot, however please note the app is not completely functional. I focused on getting the MVC framework set up first, including seeding the database, then integrated it with the Angular frontend. Finally I worked on completing the CRUD functionality throughout the entire application. This last step is not complete - you will notice the get '#!/appoinments' route/view is the only one fully functioning
 
 ## Decisions Made
-- Most apps would have configuration environment variables for development, production, and test, but I decided to not use different environments - just development
-- Addition of connection pooling. Since this is a demonstration application, the issue of waiting for the connections to & from MySQL is not major - not much time is wasted there, relatively. However, since it's best practice when creating larger applications with many database queries around the same time, let's go ahead and implement it here. This isn't hurting anything since connections are created lazily (as in, if only 2 connections are needed at the same time, the pool only created 2). I also decided to make the pool it's own module so it can be used in index.js, and models/Appointment.js
+- Addition of connection pooling. Since this is a demonstration application, the issue of waiting for the connections to & from MySQL is not major - not much time is wasted there, relatively. However, since it's best practice when creating larger applications with many database queries around the same time, I went ahead and implemented it here. This isn't hurting anything since connections are created lazily (as in, if only 2 connections are needed at the same time, the pool only created 2). I also decided to make the pool it's own module so it can be used in index.js, and models/Appointment.js
 - Since I'm not deploying this in a production environment, I gitignored node_modules
 - Store appt times as DateTime in MySql, separate out down the line
-## Decisions - Need to Make
-- add a new db & env for test?
-- add 
 ## Requirements for Setup
 - MySQL
 - Fork, Clone, and Download the repository
